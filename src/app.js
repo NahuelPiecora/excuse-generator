@@ -1,11 +1,23 @@
-/* eslint-disable */
-import "bootstrap";
-import "./style.css";
+let who = ["The deer", "My bear", "My step-sister", "His hedgehod"];
+let what = ["ate", "stomped on", "crushed", "pooped on"];
+let when = [
+  "while I was meditating",
+  "right in time.",
+  "when I finished",
+  "during lunch",
+  "before the class"
+];
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+function getRandom(range) {
+  return Math.floor(Math.random() * range);
+}
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-};
+function createExcuse() {
+  var s =
+    who[getRandom(4)] +
+    " " +
+    what[getRandom(4)] +
+    " my homework " +
+    when[getRandom(5)];
+  document.getElementById("excuse").innerHTML = s;
+}
